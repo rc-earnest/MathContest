@@ -22,6 +22,7 @@ Partial Class MathContest
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.NameTextBox = New System.Windows.Forms.TextBox()
         Me.NameLabel = New System.Windows.Forms.Label()
         Me.AgeTextBox = New System.Windows.Forms.TextBox()
@@ -45,6 +46,7 @@ Partial Class MathContest
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.SummaryButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.StudentInfoGroupBox.SuspendLayout()
         Me.CurrentMathProblemGroupBox.SuspendLayout()
         Me.MathProblemTypeGroupBox.SuspendLayout()
@@ -142,9 +144,9 @@ Partial Class MathContest
         Me.SecondNumberLabel.AutoSize = True
         Me.SecondNumberLabel.Location = New System.Drawing.Point(22, 111)
         Me.SecondNumberLabel.Name = "SecondNumberLabel"
-        Me.SecondNumberLabel.Size = New System.Drawing.Size(102, 16)
+        Me.SecondNumberLabel.Size = New System.Drawing.Size(105, 16)
         Me.SecondNumberLabel.TabIndex = 9
-        Me.SecondNumberLabel.Text = "SecondNumber"
+        Me.SecondNumberLabel.Text = "Second Number"
         '
         'FirstNumberLabel
         '
@@ -257,11 +259,12 @@ Partial Class MathContest
         Me.SummaryButton.Name = "SummaryButton"
         Me.SummaryButton.Size = New System.Drawing.Size(128, 66)
         Me.SummaryButton.TabIndex = 11
-        Me.SummaryButton.Text = "Summary"
+        Me.SummaryButton.Text = "Su&mmary"
         Me.SummaryButton.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
+        Me.ExitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.ExitButton.Location = New System.Drawing.Point(598, 307)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(128, 66)
@@ -271,8 +274,10 @@ Partial Class MathContest
         '
         'MathContest
         '
+        Me.AcceptButton = Me.SubmitButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.ExitButton
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.SummaryButton)
@@ -282,7 +287,7 @@ Partial Class MathContest
         Me.Controls.Add(Me.CurrentMathProblemGroupBox)
         Me.Controls.Add(Me.StudentInfoGroupBox)
         Me.Name = "MathContest"
-        Me.Text = "Form1"
+        Me.Text = "Math Contest Form"
         Me.StudentInfoGroupBox.ResumeLayout(False)
         Me.StudentInfoGroupBox.PerformLayout()
         Me.CurrentMathProblemGroupBox.ResumeLayout(False)
@@ -316,4 +321,5 @@ Partial Class MathContest
     Friend WithEvents StudentAnswerLabel As Label
     Friend WithEvents SecondNumberLabel As Label
     Friend WithEvents FirstNumberLabel As Label
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
