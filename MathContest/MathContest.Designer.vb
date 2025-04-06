@@ -287,6 +287,7 @@ Partial Class MathContest
         Me.Controls.Add(Me.CurrentMathProblemGroupBox)
         Me.Controls.Add(Me.StudentInfoGroupBox)
         Me.Name = "MathContest"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Math Contest Form"
         Me.StudentInfoGroupBox.ResumeLayout(False)
         Me.StudentInfoGroupBox.PerformLayout()
